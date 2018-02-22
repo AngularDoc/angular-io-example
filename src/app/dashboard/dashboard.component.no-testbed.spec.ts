@@ -1,10 +1,10 @@
 import { Router } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
-import { Hero }               from '../model/hero';
+import { Hero }               from '../model';
 
 import { addMatchers }     from '../../testing';
-import { FakeHeroService } from '../model/testing/fake-hero.service';
+import { FakeHeroService } from '../model/testing';
 
 class FakeRouter {
   navigateByUrl(url: string) { return url;  }

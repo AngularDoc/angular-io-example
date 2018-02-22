@@ -1,5 +1,5 @@
 import { HeroDetailComponent } from './hero-detail.component';
-import { Hero }                from '../model/hero';
+import { Hero }                from '../model';
 
 import { ActivatedRouteStub }  from '../../testing';
 

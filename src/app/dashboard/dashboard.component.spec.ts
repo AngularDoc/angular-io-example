@@ -2,8 +2,8 @@ import { async, inject, ComponentFixture, TestBed
 } from '@angular/core/testing';
 
 import { addMatchers, click } from '../../testing';
-import { HeroService }        from '../model/hero.service';
-import { FakeHeroService }    from '../model/testing/fake-hero.service';
+import { HeroService }        from '../model';
+import { FakeHeroService }    from '../model/testing';
 
 import { By }     from '@angular/platform-browser';
 import { Router } from '@angular/router';

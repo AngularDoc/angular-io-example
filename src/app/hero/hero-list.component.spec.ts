@@ -7,12 +7,12 @@ import { DebugElement } from '@angular/core';
 import { addMatchers, newEvent, Router, RouterStub
 } from '../../testing';
 
-import { HEROES, FakeHeroService } from '../model/testing/fake-hero.service';
+import { HEROES, FakeHeroService } from '../model/testing';
 
 import { HeroModule }         from './hero.module';
 import { HeroListComponent }  from './hero-list.component';
 import { HighlightDirective } from '../shared/highlight.directive';
-import { HeroService }        from '../model/hero.service';
+import { HeroService }        from '../model';
 
 let comp: HeroListComponent;
 let fixture: ComponentFixture<HeroListComponent>;
@@ -116,7 +116,7 @@ class Page {
   /** Hero line elements */
   heroRows: HTMLLIElement[];
 
-  /** Highlighted element */
+  /** Highlighted DebugElement */
   highlightDe: DebugElement;
 
   /** Spy on router navigate method */

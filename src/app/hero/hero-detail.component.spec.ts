@@ -9,7 +9,7 @@ import {
   ActivatedRoute, ActivatedRouteStub, click, newEvent, Router, RouterStub
 } from '../../testing';
 
-import { Hero }                from '../model/hero';
+import { Hero }                from '../model';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroDetailService }   from './hero-detail.service';
 import { HeroModule }          from './hero.module';
@@ -112,14 +112,14 @@ function overrideSetup() {
   it('fixture injected service is not the component injected service',
     inject([HeroDetailService], (service: HeroDetailService) => {
 
-    // expect(service).toEqual({}, 'service injected from fixture');
+    expect(service).toEqual(<any> {}, 'service injected from fixture');
     expect(hdsSpy).toBeTruthy('service injected into component');
   }));
 }
 
 ////////////////////
-import { HEROES, FakeHeroService } from '../model/testing/fake-hero.service';
-import { HeroService }             from '../model/hero.service';
+import { HEROES, FakeHeroService } from '../model/testing';
+import { HeroService }             from '../model';
 
 const firstHero = HEROES[0];
 

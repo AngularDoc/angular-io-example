@@ -2,7 +2,7 @@ import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { By }                                from '@angular/platform-browser';
 import { DebugElement }                      from '@angular/core';
 
-import { UserService }      from './model/user.service';
+import { UserService }      from './model';
 import { WelcomeComponent } from './welcome.component';
 
 describe('WelcomeComponent', () => {
