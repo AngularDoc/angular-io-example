@@ -4,7 +4,7 @@ ENV USER=angular
 ENV USER_HOME=/home/$USER
 ENV APP_HOME=$USER_HOME/app
 
-ARG PORT=4200
+ENV PORT=4200
 
 RUN addgroup -S $USER && adduser -S -G $USER $USER
 
@@ -20,4 +20,5 @@ COPY . $APP_HOME/
 
 EXPOSE $PORT
 
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]
+CMD [ "--", "--host", "0.0.0.0", "--port", "${PORT}" ]

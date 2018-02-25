@@ -7,10 +7,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args: 
-        PORT: 4200
     environment:
       NODE_ENV: development
+      PORT: 4200
     volumes:
       - .:/home/angular/app
       - /home/angular/app/node_modules
