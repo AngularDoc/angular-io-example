@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  angular:
+  dev:
     container_name: angular-io-example_dev
     build:
       context: .
